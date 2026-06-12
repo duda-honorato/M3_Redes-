@@ -34,7 +34,8 @@ Este projeto implementa uma solução distribuída de monitoramento de trânsito
 
 ### Passo 1: Estrutura do Projeto
 Primeiro, crie a seguinte estrutura de diretórios e arquivos:
-```bash
+
+>>>>> INÍCIO
 transito_iot/
 ├── sensor_radar.py
 ├── sensor_fluxo.py
@@ -45,6 +46,7 @@ transito_iot/
 ├── atuador_camera.py
 └── shared/
     └── config.py
+>>>>> FIM
 
 ### Passo 2: Abrir os Terminais
 
@@ -62,33 +64,8 @@ Você precisará de **NO MÍNIMO 5 terminais/janelas** de comando abertas.
 
 > ⚠️ **A ordem de execução é essencial!** Siga exatamente como abaixo:
 
+**TERMINAL 1 - PRIMEIRO: Servidor Nuvem**
+
 ```bash
-# ┌─────────────────────────────────────────────────────────────┐
-# │ TERMINAL 1 - PRIMEIRO: Servidor Nuvem                       │
-# └─────────────────────────────────────────────────────────────┘
 cd transito_iot
 python servidor_nuvem.py
-
-# ┌─────────────────────────────────────────────────────────────┐
-# │ TERMINAL 2 - SEGUNDO: SmartGateway                          │
-# └─────────────────────────────────────────────────────────────┘
-cd transito_iot
-python smart_gateway.py
-
-# ┌─────────────────────────────────────────────────────────────┐
-# │ TERMINAL 3 - TERCEIRO: Atuador Painel                       │
-# └─────────────────────────────────────────────────────────────┘
-cd transito_iot
-python atuador_painel.py
-
-# ┌─────────────────────────────────────────────────────────────┐
-# │ TERMINAL 4 - QUARTO: Atuador Display                        │
-# └─────────────────────────────────────────────────────────────┘
-cd transito_iot
-python atuador_display.py
-
-# ┌─────────────────────────────────────────────────────────────┐
-# │ TERMINAL 5 - QUINTO: Sensor Radar                           │
-# └─────────────────────────────────────────────────────────────┘
-cd transito_iot
-python sensor_radar.py
